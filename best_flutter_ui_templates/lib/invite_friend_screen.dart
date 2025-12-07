@@ -5,10 +5,10 @@ class InviteFriend extends StatefulWidget {
   const InviteFriend({super.key});
 
   @override
-  _InviteFriendState createState() => _InviteFriendState();
+  InviteFriendState createState() => InviteFriendState();
 }
 
-class _InviteFriendState extends State<InviteFriend> {
+class InviteFriendState extends State<InviteFriend> {
   @override
   void initState() {
     super.initState();
@@ -81,7 +81,7 @@ class _InviteFriendState extends State<InviteFriend> {
                         child: InkWell(
                           onTap: () {
                             //method here for functionality
-                            print('Share Action.');
+                            debugPrint('Share Action.');
                           },
                           child: Center(
                             child: Row(

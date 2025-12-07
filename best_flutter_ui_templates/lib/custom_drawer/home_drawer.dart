@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -178,7 +180,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
   }
 
   void onTapped() {
-    print('Doing Something...'); // Print to console.
+    debugPrint('Doing Something...'); // Print to console.
   }
 
   Widget inkwell(DrawerList listData) {

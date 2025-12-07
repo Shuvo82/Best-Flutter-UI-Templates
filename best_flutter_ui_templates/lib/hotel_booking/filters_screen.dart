@@ -323,7 +323,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
             break;
           }
         } catch (e) {
-          print(e);
+          debugPrint('e:$e');
         }
       }
       noList.add(

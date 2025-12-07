@@ -140,26 +140,24 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                                     color: DesignCourseAppTheme.nearlyBlue,
                                   ),
                                 ),
-                                Container(
-                                  child: Row(
-                                    children: <Widget>[
-                                      Text(
-                                        '4.3',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 22,
-                                          letterSpacing: 0.27,
-                                          color: DesignCourseAppTheme.grey,
-                                        ),
+                                Row(
+                                  children: <Widget>[
+                                    Text(
+                                      '4.3',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w200,
+                                        fontSize: 22,
+                                        letterSpacing: 0.27,
+                                        color: DesignCourseAppTheme.grey,
                                       ),
-                                      Icon(
-                                        Icons.star,
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        size: 24,
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: DesignCourseAppTheme.nearlyBlue,
+                                      size: 24,
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

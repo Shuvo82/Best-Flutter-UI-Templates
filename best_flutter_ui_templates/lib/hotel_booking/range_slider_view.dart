@@ -22,69 +22,67 @@ class _RangeSliderViewState extends State<RangeSliderView> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Stack(
-            children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    flex: _values!.start.round(),
-                    child: const SizedBox(),
+    return Column(
+      children: <Widget>[
+        Stack(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: _values!.start.round(),
+                  child: const SizedBox(),
+                ),
+                SizedBox(
+                  width: 54,
+                  child: Text(
+                    '\$${_values!.start.round()}',
+                    textAlign: TextAlign.center,
                   ),
-                  SizedBox(
-                    width: 54,
-                    child: Text(
-                      '\$${_values!.start.round()}',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1000 - _values!.start.round(),
-                    child: const SizedBox(),
-                  ),
-                ],
-              ),
-              Row(
-                children: <Widget>[
-                  Expanded(flex: _values!.end.round(), child: const SizedBox()),
-                  SizedBox(
-                    width: 54,
-                    child: Text(
-                      '\$${_values!.end.round()}',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1000 - _values!.end.round(),
-                    child: const SizedBox(),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          SliderTheme(
-            data: SliderThemeData(rangeThumbShape: CustomRangeThumbShape()),
-            child: RangeSlider(
-              values: _values!,
-              min: 0.0,
-              max: 1000.0,
-              activeColor: HotelAppTheme.buildLightTheme().primaryColor,
-              inactiveColor: Colors.grey.withValues(alpha: 0.4),
-              divisions: 1000,
-              onChanged: (RangeValues values) {
-                try {
-                  setState(() {
-                    _values = values;
-                  });
-                  widget.onChangeRangeValues!(_values!);
-                } catch (_) {}
-              },
+                ),
+                Expanded(
+                  flex: 1000 - _values!.start.round(),
+                  child: const SizedBox(),
+                ),
+              ],
             ),
+            Row(
+              children: <Widget>[
+                Expanded(flex: _values!.end.round(), child: const SizedBox()),
+                SizedBox(
+                  width: 54,
+                  child: Text(
+                    '\$${_values!.end.round()}',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Expanded(
+                  flex: 1000 - _values!.end.round(),
+                  child: const SizedBox(),
+                ),
+              ],
+            ),
+          ],
+        ),
+        SliderTheme(
+          data: SliderThemeData(rangeThumbShape: CustomRangeThumbShape()),
+          child: RangeSlider(
+            values: _values!,
+            min: 0.0,
+            max: 1000.0,
+            activeColor: HotelAppTheme.buildLightTheme().primaryColor,
+            inactiveColor: Colors.grey.withValues(alpha: 0.4),
+            divisions: 1000,
+            onChanged: (RangeValues values) {
+              try {
+                setState(() {
+                  _values = values;
+                });
+                widget.onChangeRangeValues!(_values!);
+              } catch (_) {}
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
