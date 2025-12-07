@@ -8,7 +8,7 @@ import 'package:best_flutter_ui_templates/introduction_animation/components/welc
 import 'package:flutter/material.dart';
 
 class IntroductionAnimationScreen extends StatefulWidget {
-  const IntroductionAnimationScreen({Key? key}) : super(key: key);
+  const IntroductionAnimationScreen({super.key});
 
   @override
   _IntroductionAnimationScreenState createState() =>

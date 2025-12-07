@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class DrawerUserController extends StatefulWidget {
   const DrawerUserController({
-    Key? key,
+    super.key,
     this.drawerWidth = 250,
     this.onDrawerCall,
     this.screenView,
@@ -12,7 +12,7 @@ class DrawerUserController extends StatefulWidget {
     this.menuView,
     this.drawerIsOpen,
     this.screenIndex,
-  }) : super(key: key);
+  });
 
   final double drawerWidth;
   final Function(DrawerIndex)? onDrawerCall;
@@ -37,57 +37,65 @@ class _DrawerUserControllerState extends State<DrawerUserController>
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 2000), vsync: this);
+      duration: const Duration(milliseconds: 2000),
+      vsync: this,
+    );
     iconAnimationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 0));
-    iconAnimationController
-      ?..animateTo(1.0,
-          duration: const Duration(milliseconds: 0),
-          curve: Curves.fastOutSlowIn);
-    scrollController =
-        ScrollController(initialScrollOffset: widget.drawerWidth);
-    scrollController!
-      ..addListener(() {
-        if (scrollController!.offset <= 0) {
-          if (scrolloffset != 1.0) {
-            setState(() {
-              scrolloffset = 1.0;
-              try {
-                widget.drawerIsOpen!(true);
-              } catch (_) {}
-            });
-          }
-          iconAnimationController?.animateTo(0.0,
-              duration: const Duration(milliseconds: 0),
-              curve: Curves.fastOutSlowIn);
-        } else if (scrollController!.offset > 0 &&
-            scrollController!.offset < widget.drawerWidth.floor()) {
-          iconAnimationController?.animateTo(
-              (scrollController!.offset * 100 / (widget.drawerWidth)) / 100,
-              duration: const Duration(milliseconds: 0),
-              curve: Curves.fastOutSlowIn);
-        } else {
-          if (scrolloffset != 0.0) {
-            setState(() {
-              scrolloffset = 0.0;
-              try {
-                widget.drawerIsOpen!(false);
-              } catch (_) {}
-            });
-          }
-          iconAnimationController?.animateTo(1.0,
-              duration: const Duration(milliseconds: 0),
-              curve: Curves.fastOutSlowIn);
+      vsync: this,
+      duration: const Duration(milliseconds: 0),
+    );
+    iconAnimationController?.animateTo(
+      1.0,
+      duration: const Duration(milliseconds: 0),
+      curve: Curves.fastOutSlowIn,
+    );
+    scrollController = ScrollController(
+      initialScrollOffset: widget.drawerWidth,
+    );
+    scrollController!.addListener(() {
+      if (scrollController!.offset <= 0) {
+        if (scrolloffset != 1.0) {
+          setState(() {
+            scrolloffset = 1.0;
+            try {
+              widget.drawerIsOpen!(true);
+            } catch (_) {}
+          });
         }
-      });
+        iconAnimationController?.animateTo(
+          0.0,
+          duration: const Duration(milliseconds: 0),
+          curve: Curves.fastOutSlowIn,
+        );
+      } else if (scrollController!.offset > 0 &&
+          scrollController!.offset < widget.drawerWidth.floor()) {
+        iconAnimationController?.animateTo(
+          (scrollController!.offset * 100 / (widget.drawerWidth)) / 100,
+          duration: const Duration(milliseconds: 0),
+          curve: Curves.fastOutSlowIn,
+        );
+      } else {
+        if (scrolloffset != 0.0) {
+          setState(() {
+            scrolloffset = 0.0;
+            try {
+              widget.drawerIsOpen!(false);
+            } catch (_) {}
+          });
+        }
+        iconAnimationController?.animateTo(
+          1.0,
+          duration: const Duration(milliseconds: 0),
+          curve: Curves.fastOutSlowIn,
+        );
+      }
+    });
     WidgetsBinding.instance.addPostFrameCallback((_) => getInitState());
     super.initState();
   }
 
   Future<bool> getInitState() async {
-    scrollController?.jumpTo(
-      widget.drawerWidth,
-    );
+    scrollController?.jumpTo(widget.drawerWidth);
     return true;
   }
 
@@ -117,11 +125,12 @@ class _DrawerUserControllerState extends State<DrawerUserController>
                     return Transform(
                       //transform we use for the stable drawer  we, not need to move with scroll view
                       transform: Matrix4.translationValues(
-                          scrollController!.offset, 0.0, 0.0),
+                        scrollController!.offset,
+                        0.0,
+                        0.0,
+                      ),
                       child: HomeDrawer(
-                        screenIndex: widget.screenIndex == null
-                            ? DrawerIndex.HOME
-                            : widget.screenIndex,
+                        screenIndex: widget.screenIndex ?? DrawerIndex.HOME,
                         iconAnimationController: iconAnimationController,
                         callBackIndex: (DrawerIndex indexType) {
                           onDrawerClick();
@@ -143,8 +152,9 @@ class _DrawerUserControllerState extends State<DrawerUserController>
                     color: AppTheme.white,
                     boxShadow: <BoxShadow>[
                       BoxShadow(
-                          color: AppTheme.grey.withOpacity(0.6),
-                          blurRadius: 24),
+                        color: AppTheme.grey.withValues(alpha: 0.6),
+                        blurRadius: 24,
+                      ),
                     ],
                   ),
                   child: Stack(
@@ -164,8 +174,9 @@ class _DrawerUserControllerState extends State<DrawerUserController>
                       // this just menu and arrow icon animation
                       Padding(
                         padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).padding.top + 8,
-                            left: 8),
+                          top: MediaQuery.of(context).padding.top + 8,
+                          left: 8,
+                        ),
                         child: SizedBox(
                           width: AppBar().preferredSize.height - 8,
                           height: AppBar().preferredSize.height - 8,
@@ -173,22 +184,24 @@ class _DrawerUserControllerState extends State<DrawerUserController>
                             color: Colors.transparent,
                             child: InkWell(
                               borderRadius: BorderRadius.circular(
-                                  AppBar().preferredSize.height),
+                                AppBar().preferredSize.height,
+                              ),
                               child: Center(
                                 // if you use your own menu view UI you add form initialization
-                                child: widget.menuView != null
-                                    ? widget.menuView
-                                    : AnimatedIcon(
+                                child: widget.menuView ?? AnimatedIcon(
                                         color: isLightMode
-                                            ? AppTheme.dark_grey
+                                            ? AppTheme.darkGrey
                                             : AppTheme.white,
-                                        icon: widget.animatedIconData ??
+                                        icon:
+                                            widget.animatedIconData ??
                                             AnimatedIcons.arrow_menu,
-                                        progress: iconAnimationController!),
+                                        progress: iconAnimationController!,
+                                      ),
                               ),
                               onTap: () {
-                                FocusScope.of(context)
-                                    .requestFocus(FocusNode());
+                                FocusScope.of(
+                                  context,
+                                ).requestFocus(FocusNode());
                                 onDrawerClick();
                               },
                             ),
