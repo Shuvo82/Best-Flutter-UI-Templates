@@ -1,4 +1,3 @@
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 
 import '../fitness_app_theme.dart';
@@ -37,7 +36,7 @@ class GlassView extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 16),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: HexColor("#D7E0F9"),
+                            color: Color(0xFFD7E0F9),
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(8.0),
                               bottomLeft: Radius.circular(8.0),

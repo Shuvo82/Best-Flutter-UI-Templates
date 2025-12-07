@@ -1,4 +1,3 @@
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 import '../fitness_app_theme.dart';
 
@@ -31,10 +30,7 @@ class WorkoutView extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [
-                      FitnessAppTheme.nearlyDarkBlue,
-                      HexColor("#6F56E8"),
-                    ],
+                    colors: [FitnessAppTheme.nearlyDarkBlue, Color(0xFF6F56E8)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -130,7 +126,7 @@ class WorkoutView extends StatelessWidget {
                                 padding: const EdgeInsets.all(0.0),
                                 child: Icon(
                                   Icons.arrow_right,
-                                  color: HexColor("#6F56E8"),
+                                  color: Color(0xFF6F56E8),
                                   size: 44,
                                 ),
                               ),

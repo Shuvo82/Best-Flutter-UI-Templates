@@ -1,7 +1,6 @@
 import 'package:best_flutter_ui_templates/design_course/category_list_view.dart';
 import 'package:best_flutter_ui_templates/design_course/course_info_screen.dart';
 import 'package:best_flutter_ui_templates/design_course/popular_course_list_view.dart';
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 import 'design_course_app_theme.dart';
 
@@ -200,7 +199,7 @@ class DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
               padding: const EdgeInsets.only(top: 8, bottom: 8),
               child: Container(
                 decoration: BoxDecoration(
-                  color: HexColor('#F8FAFB'),
+                  color: Color(0xFFF8FAFB),
                   borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(13.0),
                     bottomLeft: Radius.circular(13.0),
@@ -227,13 +226,13 @@ class DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                             helperStyle: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
-                              color: HexColor('#B9BABC'),
+                              color: Color(0xFFB9BABC),
                             ),
                             labelStyle: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 16,
                               letterSpacing: 0.2,
-                              color: HexColor('#B9BABC'),
+                              color: Color(0xFFB9BABC),
                             ),
                           ),
                           onEditingComplete: () {},
@@ -243,7 +242,7 @@ class DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                     SizedBox(
                       width: 60,
                       height: 60,
-                      child: Icon(Icons.search, color: HexColor('#B9BABC')),
+                      child: Icon(Icons.search, color: Color(0xFFB9BABC)),
                     ),
                   ],
                 ),

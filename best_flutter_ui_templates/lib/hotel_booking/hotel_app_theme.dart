@@ -1,4 +1,3 @@
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 
 class HotelAppTheme {
@@ -22,8 +21,8 @@ class HotelAppTheme {
   }
 
   static ThemeData buildLightTheme() {
-    final Color primaryColor = HexColor('#54D3C2');
-    final Color secondaryColor = HexColor('#54D3C2');
+    final Color primaryColor = Color(0xFF54D3C2);
+    final Color secondaryColor = Color(0xFF54D3C2);
     final ColorScheme colorScheme = const ColorScheme.light().copyWith(
       primary: primaryColor,
       secondary: secondaryColor,

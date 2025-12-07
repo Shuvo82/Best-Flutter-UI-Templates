@@ -1,5 +1,4 @@
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -75,8 +74,8 @@ class MediterranesnDietView extends StatelessWidget {
                                         height: 48,
                                         width: 2,
                                         decoration: BoxDecoration(
-                                          color: HexColor(
-                                            '#87A0E5',
+                                          color: Color(
+                                            0xFF87A0E5,
                                           ).withValues(alpha: 0.5),
                                           borderRadius: BorderRadius.all(
                                             Radius.circular(4.0),
@@ -183,8 +182,8 @@ class MediterranesnDietView extends StatelessWidget {
                                         height: 48,
                                         width: 2,
                                         decoration: BoxDecoration(
-                                          color: HexColor(
-                                            '#F56E98',
+                                          color: Color(
+                                            0xFFF56E98,
                                           ).withValues(alpha: 0.5),
                                           borderRadius: BorderRadius.all(
                                             Radius.circular(4.0),
@@ -352,8 +351,8 @@ class MediterranesnDietView extends StatelessWidget {
                                       painter: CurvePainter(
                                         colors: [
                                           FitnessAppTheme.nearlyDarkBlue,
-                                          HexColor("#8A98E8"),
-                                          HexColor("#8A98E8"),
+                                          Color(0xFF8A98E8),
+                                          Color(0xFF8A98E8),
                                         ],
                                         angle:
                                             140 +
@@ -416,8 +415,8 @@ class MediterranesnDietView extends StatelessWidget {
                                     height: 4,
                                     width: 70,
                                     decoration: BoxDecoration(
-                                      color: HexColor(
-                                        '#87A0E5',
+                                      color: Color(
+                                        0xFF87A0E5,
                                       ).withValues(alpha: 0.2),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(4.0),
@@ -432,9 +431,9 @@ class MediterranesnDietView extends StatelessWidget {
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(
                                               colors: [
-                                                HexColor('#87A0E5'),
-                                                HexColor(
-                                                  '#87A0E5',
+                                                Color(0xFF87A0E5),
+                                                Color(
+                                                  0xFF87A0E5,
                                                 ).withValues(alpha: 0.5),
                                               ],
                                             ),
@@ -491,8 +490,8 @@ class MediterranesnDietView extends StatelessWidget {
                                         height: 4,
                                         width: 70,
                                         decoration: BoxDecoration(
-                                          color: HexColor(
-                                            '#F56E98',
+                                          color: Color(
+                                            0xFFF56E98,
                                           ).withValues(alpha: 0.2),
                                           borderRadius: BorderRadius.all(
                                             Radius.circular(4.0),
@@ -508,10 +507,10 @@ class MediterranesnDietView extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                 gradient: LinearGradient(
                                                   colors: [
-                                                    HexColor(
-                                                      '#F56E98',
+                                                    Color(
+                                                      0xFFF56E98,
                                                     ).withValues(alpha: 0.1),
-                                                    HexColor('#F56E98'),
+                                                    Color(0xFFF56E98),
                                                   ],
                                                 ),
                                                 borderRadius: BorderRadius.all(
@@ -570,8 +569,8 @@ class MediterranesnDietView extends StatelessWidget {
                                         height: 4,
                                         width: 70,
                                         decoration: BoxDecoration(
-                                          color: HexColor(
-                                            '#F1B440',
+                                          color: Color(
+                                            0xFFF1B440,
                                           ).withValues(alpha: 0.2),
                                           borderRadius: BorderRadius.all(
                                             Radius.circular(4.0),
@@ -587,10 +586,10 @@ class MediterranesnDietView extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                 gradient: LinearGradient(
                                                   colors: [
-                                                    HexColor(
-                                                      '#F1B440',
+                                                    Color(
+                                                      0xFFF1B440,
                                                     ).withValues(alpha: 0.1),
-                                                    HexColor('#F1B440'),
+                                                    Color(0xFFF1B440),
                                                   ],
                                                 ),
                                                 borderRadius: BorderRadius.all(

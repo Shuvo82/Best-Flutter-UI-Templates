@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
 import 'package:best_flutter_ui_templates/fitness_app/models/tab_icon_data.dart';
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 
 class BottomBarView extends StatefulWidget {
@@ -167,7 +166,7 @@ class BottomBarViewState extends State<BottomBarView>
                         gradient: LinearGradient(
                           colors: [
                             FitnessAppTheme.nearlyDarkBlue,
-                            HexColor('#6A88E5'),
+                            Color(0xFF6A88E5),
                           ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,

@@ -1,6 +1,5 @@
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/wave_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 
 class WaterView extends StatefulWidget {
@@ -217,7 +216,7 @@ class WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                               fontWeight: FontWeight.w500,
                                               fontSize: 12,
                                               letterSpacing: 0.0,
-                                              color: HexColor('#F65283'),
+                                              color: Color(0xFFF65283),
                                             ),
                                           ),
                                         ),
@@ -294,7 +293,7 @@ class WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                           width: 60,
                           height: 160,
                           decoration: BoxDecoration(
-                            color: HexColor('#E8EDFE'),
+                            color: Color(0xFFE8EDFE),
                             borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(80.0),
                               bottomLeft: Radius.circular(80.0),

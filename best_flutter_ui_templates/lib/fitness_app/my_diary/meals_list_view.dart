@@ -1,6 +1,5 @@
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
 import 'package:best_flutter_ui_templates/fitness_app/models/meals_list_data.dart';
-import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 
 class MealsListView extends StatefulWidget {
@@ -139,17 +138,36 @@ class MealsView extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                            color: HexColor(
-                              mealsListData!.endColor,
+                            color: Color(
+                              (int.parse(
+                                    mealsListData!.endColor.replaceAll('#', ''),
+                                    radix: 16,
+                                  ) |
+                                  0xFF000000),
                             ).withValues(alpha: 0.6),
                             offset: const Offset(1.1, 4.0),
                             blurRadius: 8.0,
                           ),
                         ],
                         gradient: LinearGradient(
-                          colors: <HexColor>[
-                            HexColor(mealsListData!.startColor),
-                            HexColor(mealsListData!.endColor),
+                          colors: [
+                            Color(
+                              int.parse(
+                                    mealsListData!.startColor.replaceAll(
+                                      '#',
+                                      '',
+                                    ),
+                                    radix: 16,
+                                  ) |
+                                  0xFF000000,
+                            ),
+                            Color(
+                              int.parse(
+                                    mealsListData!.endColor.replaceAll('#', ''),
+                                    radix: 16,
+                                  ) |
+                                  0xFF000000,
+                            ),
                           ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -259,8 +277,13 @@ class MealsView extends StatelessWidget {
                                       padding: const EdgeInsets.all(6.0),
                                       child: Icon(
                                         Icons.add,
-                                        color: HexColor(
-                                          mealsListData!.endColor,
+                                        color: Color(
+                                          int.parse(
+                                                mealsListData!.endColor
+                                                    .replaceAll('#', ''),
+                                                radix: 16,
+                                              ) |
+                                              0xFF000000,
                                         ),
                                         size: 24,
                                       ),
