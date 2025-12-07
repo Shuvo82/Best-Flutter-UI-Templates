@@ -8,10 +8,10 @@ class PopularCourseListView extends StatefulWidget {
 
   final Function()? callBack;
   @override
-  _PopularCourseListViewState createState() => _PopularCourseListViewState();
+  PopularCourseListViewState createState() => PopularCourseListViewState();
 }
 
-class _PopularCourseListViewState extends State<PopularCourseListView>
+class PopularCourseListViewState extends State<PopularCourseListView>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   @override
@@ -145,8 +145,8 @@ class CategoryView extends StatelessWidget {
                                             fontWeight: FontWeight.w600,
                                             fontSize: 16,
                                             letterSpacing: 0.27,
-                                            color: DesignCourseAppTheme
-                                                .darkerText,
+                                            color:
+                                                DesignCourseAppTheme.darkerText,
                                           ),
                                         ),
                                       ),
@@ -159,8 +159,7 @@ class CategoryView extends StatelessWidget {
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: <Widget>[
@@ -171,8 +170,8 @@ class CategoryView extends StatelessWidget {
                                                 fontWeight: FontWeight.w200,
                                                 fontSize: 12,
                                                 letterSpacing: 0.27,
-                                                color: DesignCourseAppTheme
-                                                    .grey,
+                                                color:
+                                                    DesignCourseAppTheme.grey,
                                               ),
                                             ),
                                             Row(
@@ -181,20 +180,17 @@ class CategoryView extends StatelessWidget {
                                                   '${category!.rating}',
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.w200,
+                                                    fontWeight: FontWeight.w200,
                                                     fontSize: 18,
                                                     letterSpacing: 0.27,
-                                                    color:
-                                                        DesignCourseAppTheme
-                                                            .grey,
+                                                    color: DesignCourseAppTheme
+                                                        .grey,
                                                   ),
                                                 ),
                                                 Icon(
                                                   Icons.star,
-                                                  color:
-                                                      DesignCourseAppTheme
-                                                          .nearlyBlue,
+                                                  color: DesignCourseAppTheme
+                                                      .nearlyBlue,
                                                   size: 20,
                                                 ),
                                               ],

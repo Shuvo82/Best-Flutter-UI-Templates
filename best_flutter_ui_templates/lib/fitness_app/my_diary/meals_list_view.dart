@@ -14,10 +14,10 @@ class MealsListView extends StatefulWidget {
   final Animation<double>? mainScreenAnimation;
 
   @override
-  _MealsListViewState createState() => _MealsListViewState();
+  MealsListViewState createState() => MealsListViewState();
 }
 
-class _MealsListViewState extends State<MealsListView>
+class MealsListViewState extends State<MealsListView>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   List<MealsListData> mealsListData = MealsListData.tabIconsList;

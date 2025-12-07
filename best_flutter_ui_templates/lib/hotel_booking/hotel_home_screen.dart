@@ -11,10 +11,10 @@ class HotelHomeScreen extends StatefulWidget {
   const HotelHomeScreen({super.key});
 
   @override
-  _HotelHomeScreenState createState() => _HotelHomeScreenState();
+  HotelHomeScreenState createState() => HotelHomeScreenState();
 }
 
-class _HotelHomeScreenState extends State<HotelHomeScreen>
+class HotelHomeScreenState extends State<HotelHomeScreen>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   List<HotelListData> hotelList = HotelListData.hotelList;
@@ -88,9 +88,8 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                             ];
                           },
                       body: Container(
-                        color: HotelAppTheme.buildLightTheme()
-                            .colorScheme
-                            .surface,
+                        color:
+                            HotelAppTheme.buildLightTheme().colorScheme.surface,
                         child: ListView.builder(
                           itemCount: hotelList.length,
                           padding: const EdgeInsets.only(top: 8),
@@ -402,8 +401,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   child: Icon(
                     FontAwesomeIcons.magnifyingGlass,
                     size: 20,
-                    color:
-                        HotelAppTheme.buildLightTheme().colorScheme.surface,
+                    color: HotelAppTheme.buildLightTheme().colorScheme.surface,
                   ),
                 ),
               ),

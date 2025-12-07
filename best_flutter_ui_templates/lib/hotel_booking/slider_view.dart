@@ -9,10 +9,10 @@ class SliderView extends StatefulWidget {
   final double? distValue;
 
   @override
-  _SliderViewState createState() => _SliderViewState();
+  SliderViewState createState() => SliderViewState();
 }
 
-class _SliderViewState extends State<SliderView> {
+class SliderViewState extends State<SliderView> {
   double distValue = 50.0;
 
   @override

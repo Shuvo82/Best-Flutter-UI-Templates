@@ -14,10 +14,10 @@ class WaterView extends StatefulWidget {
   final Animation<double>? mainScreenAnimation;
 
   @override
-  _WaterViewState createState() => _WaterViewState();
+  WaterViewState createState() => WaterViewState();
 }
 
-class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
+class WaterViewState extends State<WaterView> with TickerProviderStateMixin {
   Future<bool> getData() async {
     await Future<dynamic>.delayed(const Duration(milliseconds: 50));
     return true;

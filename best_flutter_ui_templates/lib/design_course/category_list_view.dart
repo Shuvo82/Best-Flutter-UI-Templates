@@ -8,10 +8,10 @@ class CategoryListView extends StatefulWidget {
 
   final Function()? callBack;
   @override
-  _CategoryListViewState createState() => _CategoryListViewState();
+  CategoryListViewState createState() => CategoryListViewState();
 }
 
-class _CategoryListViewState extends State<CategoryListView>
+class CategoryListViewState extends State<CategoryListView>
     with TickerProviderStateMixin {
   AnimationController? animationController;
 
@@ -142,9 +142,7 @@ class CategoryView extends StatelessWidget {
                                   child: Column(
                                     children: <Widget>[
                                       Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 16,
-                                        ),
+                                        padding: const EdgeInsets.only(top: 16),
                                         child: Text(
                                           category!.title,
                                           textAlign: TextAlign.left,
@@ -152,8 +150,8 @@ class CategoryView extends StatelessWidget {
                                             fontWeight: FontWeight.w600,
                                             fontSize: 16,
                                             letterSpacing: 0.27,
-                                            color: DesignCourseAppTheme
-                                                .darkerText,
+                                            color:
+                                                DesignCourseAppTheme.darkerText,
                                           ),
                                         ),
                                       ),
@@ -165,8 +163,7 @@ class CategoryView extends StatelessWidget {
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: <Widget>[
@@ -177,31 +174,27 @@ class CategoryView extends StatelessWidget {
                                                 fontWeight: FontWeight.w200,
                                                 fontSize: 12,
                                                 letterSpacing: 0.27,
-                                                color: DesignCourseAppTheme
-                                                    .grey,
+                                                color:
+                                                    DesignCourseAppTheme.grey,
                                               ),
                                             ),
                                             Row(
                                               children: <Widget>[
                                                 Text(
                                                   '${category!.rating}',
-                                                  textAlign:
-                                                      TextAlign.left,
+                                                  textAlign: TextAlign.left,
                                                   style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.w200,
+                                                    fontWeight: FontWeight.w200,
                                                     fontSize: 18,
                                                     letterSpacing: 0.27,
-                                                    color:
-                                                        DesignCourseAppTheme
-                                                            .grey,
+                                                    color: DesignCourseAppTheme
+                                                        .grey,
                                                   ),
                                                 ),
                                                 Icon(
                                                   Icons.star,
-                                                  color:
-                                                      DesignCourseAppTheme
-                                                          .nearlyBlue,
+                                                  color: DesignCourseAppTheme
+                                                      .nearlyBlue,
                                                   size: 20,
                                                 ),
                                               ],
@@ -216,8 +209,7 @@ class CategoryView extends StatelessWidget {
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                              MainAxisAlignment.spaceBetween,
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
@@ -242,15 +234,13 @@ class CategoryView extends StatelessWidget {
                                                     ),
                                               ),
                                               child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(
-                                                      4.0,
-                                                    ),
+                                                padding: const EdgeInsets.all(
+                                                  4.0,
+                                                ),
                                                 child: Icon(
                                                   Icons.add,
-                                                  color:
-                                                      DesignCourseAppTheme
-                                                          .nearlyWhite,
+                                                  color: DesignCourseAppTheme
+                                                      .nearlyWhite,
                                                 ),
                                               ),
                                             ),

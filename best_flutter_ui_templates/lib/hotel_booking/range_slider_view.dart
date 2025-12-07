@@ -8,10 +8,10 @@ class RangeSliderView extends StatefulWidget {
   final RangeValues? values;
 
   @override
-  _RangeSliderViewState createState() => _RangeSliderViewState();
+  RangeSliderViewState createState() => RangeSliderViewState();
 }
 
-class _RangeSliderViewState extends State<RangeSliderView> {
+class RangeSliderViewState extends State<RangeSliderView> {
   RangeValues? _values;
 
   @override
@@ -28,10 +28,7 @@ class _RangeSliderViewState extends State<RangeSliderView> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Expanded(
-                  flex: _values!.start.round(),
-                  child: const SizedBox(),
-                ),
+                Expanded(flex: _values!.start.round(), child: const SizedBox()),
                 SizedBox(
                   width: 54,
                   child: Text(

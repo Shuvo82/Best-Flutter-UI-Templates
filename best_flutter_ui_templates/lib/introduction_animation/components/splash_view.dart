@@ -6,10 +6,10 @@ class SplashView extends StatefulWidget {
   const SplashView({super.key, required this.animationController});
 
   @override
-  _SplashViewState createState() => _SplashViewState();
+  SplashViewState createState() => SplashViewState();
 }
 
-class _SplashViewState extends State<SplashView> {
+class SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     final introductionanimation =

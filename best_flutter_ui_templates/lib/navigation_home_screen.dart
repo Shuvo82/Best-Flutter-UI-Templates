@@ -11,10 +11,10 @@ class NavigationHomeScreen extends StatefulWidget {
   const NavigationHomeScreen({super.key});
 
   @override
-  _NavigationHomeScreenState createState() => _NavigationHomeScreenState();
+  NavigationHomeScreenState createState() => NavigationHomeScreenState();
 }
 
-class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
+class NavigationHomeScreenState extends State<NavigationHomeScreen> {
   Widget? screenView;
   DrawerIndex? drawerIndex;
 

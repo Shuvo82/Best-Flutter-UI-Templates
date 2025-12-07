@@ -8,10 +8,10 @@ class WaveView extends StatefulWidget {
 
   const WaveView({super.key, this.percentageValue = 100.0});
   @override
-  _WaveViewState createState() => _WaveViewState();
+  WaveViewState createState() => WaveViewState();
 }
 
-class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
+class WaveViewState extends State<WaveView> with TickerProviderStateMixin {
   AnimationController? animationController;
   AnimationController? waveAnimationController;
   Offset bottleOffset1 = Offset(0, 0);

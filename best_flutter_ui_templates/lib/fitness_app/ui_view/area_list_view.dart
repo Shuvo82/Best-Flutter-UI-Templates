@@ -12,10 +12,10 @@ class AreaListView extends StatefulWidget {
   final AnimationController? mainScreenAnimationController;
   final Animation<double>? mainScreenAnimation;
   @override
-  _AreaListViewState createState() => _AreaListViewState();
+  AreaListViewState createState() => AreaListViewState();
 }
 
-class _AreaListViewState extends State<AreaListView>
+class AreaListViewState extends State<AreaListView>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   List<String> areaListData = <String>[

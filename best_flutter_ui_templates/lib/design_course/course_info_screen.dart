@@ -5,10 +5,10 @@ class CourseInfoScreen extends StatefulWidget {
   const CourseInfoScreen({super.key});
 
   @override
-  _CourseInfoScreenState createState() => _CourseInfoScreenState();
+  CourseInfoScreenState createState() => CourseInfoScreenState();
 }
 
-class _CourseInfoScreenState extends State<CourseInfoScreen>
+class CourseInfoScreenState extends State<CourseInfoScreen>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;

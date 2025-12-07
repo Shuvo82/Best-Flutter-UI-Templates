@@ -23,10 +23,10 @@ class DrawerUserController extends StatefulWidget {
   final DrawerIndex? screenIndex;
 
   @override
-  _DrawerUserControllerState createState() => _DrawerUserControllerState();
+  DrawerUserControllerState createState() => DrawerUserControllerState();
 }
 
-class _DrawerUserControllerState extends State<DrawerUserController>
+class DrawerUserControllerState extends State<DrawerUserController>
     with TickerProviderStateMixin {
   ScrollController? scrollController;
   AnimationController? iconAnimationController;
@@ -190,15 +190,17 @@ class _DrawerUserControllerState extends State<DrawerUserController>
                               ),
                               child: Center(
                                 // if you use your own menu view UI you add form initialization
-                                child: widget.menuView ?? AnimatedIcon(
-                                        color: isLightMode
-                                            ? AppTheme.darkGrey
-                                            : AppTheme.white,
-                                        icon:
-                                            widget.animatedIconData ??
-                                            AnimatedIcons.arrow_menu,
-                                        progress: iconAnimationController!,
-                                      ),
+                                child:
+                                    widget.menuView ??
+                                    AnimatedIcon(
+                                      color: isLightMode
+                                          ? AppTheme.darkGrey
+                                          : AppTheme.white,
+                                      icon:
+                                          widget.animatedIconData ??
+                                          AnimatedIcons.arrow_menu,
+                                      progress: iconAnimationController!,
+                                    ),
                               ),
                               onTap: () {
                                 FocusScope.of(

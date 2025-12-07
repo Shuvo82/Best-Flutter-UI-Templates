@@ -5,10 +5,10 @@ class FeedbackScreen extends StatefulWidget {
   const FeedbackScreen({super.key});
 
   @override
-  _FeedbackScreenState createState() => _FeedbackScreenState();
+  FeedbackScreenState createState() => FeedbackScreenState();
 }
 
-class _FeedbackScreenState extends State<FeedbackScreen> {
+class FeedbackScreenState extends State<FeedbackScreen> {
   @override
   void initState() {
     super.initState();

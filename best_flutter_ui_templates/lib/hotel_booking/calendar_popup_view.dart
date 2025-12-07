@@ -25,10 +25,10 @@ class CalendarPopupView extends StatefulWidget {
 
   final Function()? onCancelClick;
   @override
-  _CalendarPopupViewState createState() => _CalendarPopupViewState();
+  CalendarPopupViewState createState() => CalendarPopupViewState();
 }
 
-class _CalendarPopupViewState extends State<CalendarPopupView>
+class CalendarPopupViewState extends State<CalendarPopupView>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   DateTime? startDate;
@@ -82,9 +82,8 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                     padding: const EdgeInsets.all(24.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: HotelAppTheme.buildLightTheme()
-                            .colorScheme
-                            .surface,
+                        color:
+                            HotelAppTheme.buildLightTheme().colorScheme.surface,
                         borderRadius: const BorderRadius.all(
                           Radius.circular(24.0),
                         ),

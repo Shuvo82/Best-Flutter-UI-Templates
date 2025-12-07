@@ -20,10 +20,10 @@ class CustomCalendarView extends StatefulWidget {
   final Function(DateTime, DateTime)? startEndDateChange;
 
   @override
-  _CustomCalendarViewState createState() => _CustomCalendarViewState();
+  CustomCalendarViewState createState() => CustomCalendarViewState();
 }
 
-class _CustomCalendarViewState extends State<CustomCalendarView> {
+class CustomCalendarViewState extends State<CustomCalendarView> {
   List<DateTime> dateList = <DateTime>[];
   DateTime currentMonthDate = DateTime.now();
   DateTime? startDate;
@@ -83,9 +83,7 @@ class _CustomCalendarViewState extends State<CustomCalendarView> {
                   height: 38,
                   width: 38,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(24.0),
-                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                     border: Border.all(
                       color: HotelAppTheme.buildLightTheme().dividerColor,
                     ),
@@ -132,9 +130,7 @@ class _CustomCalendarViewState extends State<CustomCalendarView> {
                   height: 38,
                   width: 38,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(24.0),
-                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                     border: Border.all(
                       color: HotelAppTheme.buildLightTheme().dividerColor,
                     ),
@@ -318,9 +314,7 @@ class _CustomCalendarViewState extends State<CustomCalendarView> {
                             boxShadow: getIsItStartAndEndDate(date)
                                 ? <BoxShadow>[
                                     BoxShadow(
-                                      color: Colors.grey.withValues(
-                                        alpha: 0.6,
-                                      ),
+                                      color: Colors.grey.withValues(alpha: 0.6),
                                       blurRadius: 4,
                                       offset: const Offset(0, 0),
                                     ),
@@ -364,8 +358,7 @@ class _CustomCalendarViewState extends State<CustomCalendarView> {
                                 DateTime.now().year == date.year
                             ? getIsInRange(date)
                                   ? Colors.white
-                                  : HotelAppTheme.buildLightTheme()
-                                        .primaryColor
+                                  : HotelAppTheme.buildLightTheme().primaryColor
                             : Colors.transparent,
                         shape: BoxShape.circle,
                       ),

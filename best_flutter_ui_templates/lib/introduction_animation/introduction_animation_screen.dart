@@ -11,11 +11,11 @@ class IntroductionAnimationScreen extends StatefulWidget {
   const IntroductionAnimationScreen({super.key});
 
   @override
-  _IntroductionAnimationScreenState createState() =>
-      _IntroductionAnimationScreenState();
+  IntroductionAnimationScreenState createState() =>
+      IntroductionAnimationScreenState();
 }
 
-class _IntroductionAnimationScreenState
+class IntroductionAnimationScreenState
     extends State<IntroductionAnimationScreen>
     with TickerProviderStateMixin {
   AnimationController? _animationController;

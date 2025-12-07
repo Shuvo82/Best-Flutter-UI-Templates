@@ -16,10 +16,10 @@ class HomeDrawer extends StatefulWidget {
   final Function(DrawerIndex)? callBackIndex;
 
   @override
-  _HomeDrawerState createState() => _HomeDrawerState();
+  HomeDrawerState createState() => HomeDrawerState();
 }
 
-class _HomeDrawerState extends State<HomeDrawer> {
+class HomeDrawerState extends State<HomeDrawer> {
   List<DrawerList>? drawerList;
   @override
   void initState() {

@@ -9,10 +9,10 @@ class DesignCourseHomeScreen extends StatefulWidget {
   const DesignCourseHomeScreen({super.key});
 
   @override
-  _DesignCourseHomeScreenState createState() => _DesignCourseHomeScreenState();
+  DesignCourseHomeScreenState createState() => DesignCourseHomeScreenState();
 }
 
-class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
+class DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
   CategoryType categoryType = CategoryType.ui;
 
   @override
@@ -23,9 +23,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
         backgroundColor: Colors.transparent,
         body: Column(
           children: <Widget>[
-            SizedBox(
-              height: MediaQuery.of(context).padding.top,
-            ),
+            SizedBox(height: MediaQuery.of(context).padding.top),
             getAppBarUI(),
             Expanded(
               child: SingleChildScrollView(
@@ -35,9 +33,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                     children: <Widget>[
                       getSearchBarUI(),
                       getCategoryUI(),
-                      Flexible(
-                        child: getPopularCourseUI(),
-                      ),
+                      Flexible(child: getPopularCourseUI()),
                     ],
                   ),
                 ),
@@ -67,30 +63,26 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
             ),
           ),
         ),
-        const SizedBox(
-          height: 16,
-        ),
+        const SizedBox(height: 16),
         Padding(
           padding: const EdgeInsets.only(left: 16, right: 16),
           child: Row(
             children: <Widget>[
               getButtonUI(CategoryType.ui, categoryType == CategoryType.ui),
-              const SizedBox(
-                width: 16,
-              ),
+              const SizedBox(width: 16),
               getButtonUI(
-                  CategoryType.coding, categoryType == CategoryType.coding),
-              const SizedBox(
-                width: 16,
+                CategoryType.coding,
+                categoryType == CategoryType.coding,
               ),
+              const SizedBox(width: 16),
               getButtonUI(
-                  CategoryType.basic, categoryType == CategoryType.basic),
+                CategoryType.basic,
+                categoryType == CategoryType.basic,
+              ),
             ],
           ),
         ),
-        const SizedBox(
-          height: 16,
-        ),
+        const SizedBox(height: 16),
         CategoryListView(
           callBack: () {
             moveTo();
@@ -123,7 +115,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                 moveTo();
               },
             ),
-          )
+          ),
         ],
       ),
     );
@@ -150,11 +142,12 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
-            color: isSelected
-                ? DesignCourseAppTheme.nearlyBlue
-                : DesignCourseAppTheme.nearlyWhite,
-            borderRadius: const BorderRadius.all(Radius.circular(24.0)),
-            border: Border.all(color: DesignCourseAppTheme.nearlyBlue)),
+          color: isSelected
+              ? DesignCourseAppTheme.nearlyBlue
+              : DesignCourseAppTheme.nearlyWhite,
+          borderRadius: const BorderRadius.all(Radius.circular(24.0)),
+          border: Border.all(color: DesignCourseAppTheme.nearlyBlue),
+        ),
         child: Material(
           color: Colors.transparent,
           child: InkWell(
@@ -167,7 +160,11 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
             },
             child: Padding(
               padding: const EdgeInsets.only(
-                  top: 12, bottom: 12, left: 18, right: 18),
+                top: 12,
+                bottom: 12,
+                left: 18,
+                right: 18,
+              ),
               child: Center(
                 child: Text(
                   txt,
@@ -247,15 +244,13 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                       width: 60,
                       height: 60,
                       child: Icon(Icons.search, color: HexColor('#B9BABC')),
-                    )
+                    ),
                   ],
                 ),
               ),
             ),
           ),
-          const Expanded(
-            child: SizedBox(),
-          )
+          const Expanded(child: SizedBox()),
         ],
       ),
     );
@@ -298,15 +293,11 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
             width: 60,
             height: 60,
             child: Image.asset('assets/design_course/userImage.png'),
-          )
+          ),
         ],
       ),
     );
   }
 }
 
-enum CategoryType {
-  ui,
-  coding,
-  basic,
-}
+enum CategoryType { ui, coding, basic }

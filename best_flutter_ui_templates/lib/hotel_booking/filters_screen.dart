@@ -9,10 +9,10 @@ class FiltersScreen extends StatefulWidget {
   const FiltersScreen({super.key});
 
   @override
-  _FiltersScreenState createState() => _FiltersScreenState();
+  FiltersScreenState createState() => FiltersScreenState();
 }
 
-class _FiltersScreenState extends State<FiltersScreen> {
+class FiltersScreenState extends State<FiltersScreen> {
   List<PopularFilterListData> popularFilterListData =
       PopularFilterListData.popularFList;
   List<PopularFilterListData> accomodationListData =
